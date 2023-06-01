@@ -1,11 +1,11 @@
 <?php
 
-namespace _34ML\FilamentPriceCoverterField;
+namespace _34ML\FilamentPriceConverterField;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentPriceCoverterFieldServiceProvider extends PackageServiceProvider
+class FilamentPriceConverterFieldServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -15,7 +15,7 @@ class FilamentPriceCoverterFieldServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('filament-price-coverter-field')
+            ->name('filament-price-converter-field')
             ->hasConfigFile();
     }
 }

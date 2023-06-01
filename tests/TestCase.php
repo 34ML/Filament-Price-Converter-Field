@@ -1,10 +1,10 @@
 <?php
 
-namespace _34ML\FilamentPriceCoverterField\Tests;
+namespace _34ML\FilamentPriceConverterField\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use _34ML\FilamentPriceCoverterField\FilamentPriceCoverterFieldServiceProvider;
+use _34ML\FilamentPriceConverterField\FilamentPriceConverterFieldServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => '_34ML\\FilamentPriceCoverterField\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => '_34ML\\FilamentPriceConverterField\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            FilamentPriceCoverterFieldServiceProvider::class,
+            FilamentPriceConverterFieldServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_filament-price-coverter-field_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_filament-price-Converter-field_table.php.stub';
         $migration->up();
         */
     }

@@ -1,12 +1,12 @@
 {
-    "name": "34ml/filament-price-coverter-field",
+    "name": "34ml/filament-price-converter-field",
     "description": "A price converter field for filament admin panel",
     "keywords": [
         "34ML",
         "laravel",
         "filament-price-coverter-field"
     ],
-    "homepage": "https://github.com/34ml/filament-price-coverter-field",
+    "homepage": "https://github.com/34ml/filament-price-converter-field",
     "license": "MIT",
     "authors": [
         {
@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "_34ML\\FilamentPriceCoverterField\\": "src/"
+            "_34ML\\FilamentPriceConverterField\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "_34ML\\FilamentPriceCoverterField\\Tests\\": "tests/"
+            "_34ML\\FilamentPriceConverterField\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -56,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "_34ML\\FilamentPriceCoverterField\\FilamentPriceCoverterFieldServiceProvider"
+                "_34ML\\FilamentPriceConverterField\\FilamentPriceConverterFieldServiceProvider"
             ],
             "aliases": {
-                "FilamentPriceCoverterField": "_34ML\\FilamentPriceCoverterField\\Facades\\FilamentPriceCoverterField"
+                "FilamentPriceConverterField": "_34ML\\FilamentPriceConverterField\\Facades\\FilamentPriceConverterField"
             }
         }
     },
