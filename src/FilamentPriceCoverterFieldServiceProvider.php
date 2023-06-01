@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace _34ML\FilamentPriceCoverterField;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use _34ML\FilamentPriceCoverterField\Commands\FilamentPriceCoverterFieldCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FilamentPriceCoverterFieldServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('filament-price-coverter-field')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_filament-price-coverter-field_table')
+            ->hasCommand(FilamentPriceCoverterFieldCommand::class);
     }
 }
