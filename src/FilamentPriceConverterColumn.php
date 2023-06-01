@@ -4,6 +4,7 @@ namespace _34ML\FilamentPriceConverterField;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Database\Eloquent\Model;
 
 class FilamentPriceConverterColumn extends TextColumn
 {
@@ -12,6 +13,8 @@ class FilamentPriceConverterColumn extends TextColumn
     {
         parent::setUp();
 
-        $this->formatStateUsing(fn (string $state): string => $state / 100);
+        $this->formatStateUsing(fn ($state) =>
+            is_numeric($state) ? $state / 100 : ''
+        );
     }
 }
