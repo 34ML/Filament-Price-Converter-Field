@@ -1,5 +1,5 @@
 # Price converter field for filament admin panel
-![PriceConverterFieldHeader](https://raw.githubusercontent.com/34ML/Filament-Price-Converter-Field/main/resources/images/Filament-Price-Converter-Image.jpg)
+![PriceConverterFieldHeader](https://raw.githubusercontent.com/34ML/Filament-Price-Converter-Field/main/resources/images/Filament-Price-Converter-Field-image.jpg)
 
 ## Installation
 
