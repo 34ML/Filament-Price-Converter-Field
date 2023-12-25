@@ -1,4 +1,5 @@
-# A price converter field for filament admin panel
+# Price converter field for filament admin panel
+![PriceConverterFieldHeader](https://raw.githubusercontent.com/34ML/Filament-Price-Converter_field/main/resources/images/Filament-Price-Converter-Image.jpg)
 
 ## Installation
 
@@ -9,7 +10,7 @@ composer require 34ml/filament-price-coverter-field
 ```
 
 ## Usage
-Just add the field in your resource, view, create,or edit pages inside the form function
+Add the field in your resource, view, create or edit pages inside the form function
 ```php
     use _34ML\FilamentPriceConverterField\FilamentPriceConverterField;
     
