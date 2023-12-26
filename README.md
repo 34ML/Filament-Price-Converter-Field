@@ -9,6 +9,14 @@ You can install the package via composer:
 composer require 34ml/filament-price-coverter-field
 ```
 
+
+This is the content of the published config file where you can set the default currency
+```php
+return [
+    'currency' => 'EUR',
+    ];
+```
+
 ## Usage
 Add the field in your resource, view, create or edit pages inside the form function
 ```php
@@ -26,7 +34,8 @@ Also if you want to use it inside a table for the list page
 ## Credits
 
 - [Mostafa Hassan](https://github.com/MostafaHassan1)
-- [All Contributors](../../contributors)
+- [Reham Mourad](https://github.com/RehamMourad)
+- [Ahmed Essam](https://github.com/aessam13)
 
 ## License
 
