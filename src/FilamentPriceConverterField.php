@@ -3,18 +3,20 @@
 namespace _34ML\FilamentPriceConverterField;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Support\RawJs;
 
 class FilamentPriceConverterField extends TextInput
 {
-
-    protected function setUp(): void
+    public static function make(string $name): static
     {
-        parent::setUp();
+        $field = parent::make($name);
 
-        $this->numeric();
+        $field->numeric()->mask(RawJs::make('$money($input)'))->minValue(0)->stripCharacters(',');
 
-        $this->afterStateHydrated(fn(TextInput $component, $state) => $component->state($state / 100));
+        $field->afterStateHydrated(fn(TextInput $component, $state) => $component->state($state / 100));
 
-        $this->dehydrateStateUsing(fn ($state) => $state * 100);
+        $field->dehydrateStateUsing(fn ($state) => $state * 100);
+
+        return $field;
     }
 }

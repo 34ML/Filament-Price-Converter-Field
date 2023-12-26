@@ -2,19 +2,14 @@
 
 namespace _34ML\FilamentPriceConverterField;
 
-use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Model;
 
 class FilamentPriceConverterColumn extends TextColumn
 {
-
-    protected function setUp(): void
+    public static function make(string $name): static
     {
-        parent::setUp();
-
-        $this->formatStateUsing(fn ($state) =>
-            is_numeric($state) ? $state / 100 : ''
-        );
+        $field = parent::make($name);
+        $field->money(config('filament-price-converter-field.currency','USD'),100);
+        return $field;
     }
 }
