@@ -11,7 +11,8 @@ class FilamentPriceConverterField extends TextInput
     {
         $field = parent::make($name);
 
-        $field->numeric()->mask(RawJs::make('$money($input)'))->minValue(0)->stripCharacters(',');
+//        $field->numeric()->mask(RawJs::make('$money($input)'))->minValue(0)->stripCharacters(',');
+        $field->numeric()->minValue(0);
 
         $field->afterStateHydrated(fn(TextInput $component, $state) => $component->state($state / 100));
 
