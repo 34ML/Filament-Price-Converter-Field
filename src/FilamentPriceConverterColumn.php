@@ -6,10 +6,13 @@ use Filament\Tables\Columns\TextColumn;
 
 class FilamentPriceConverterColumn extends TextColumn
 {
-    public static function make(string $name): static
+    protected function setUp(): void
     {
-        $field = parent::make($name);
-        $field->money(config('filament-price-converter-field.currency','USD'),100);
-        return $field;
+        parent::setUp();
+
+        $this->money(
+            config('filament-price-converter-field.currency', 'USD'),
+            100
+        );
     }
 }
