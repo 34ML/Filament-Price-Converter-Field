@@ -3,7 +3,6 @@
 namespace _34ML\FilamentPriceConverterField;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Support\RawJs;
 
 class FilamentPriceConverterField extends TextInput
 {
@@ -14,11 +13,19 @@ class FilamentPriceConverterField extends TextInput
         $this
             ->numeric()
             ->minValue(0)
-            ->afterStateHydrated(
-                fn (TextInput $component, $state) => $component->state($state / 100)
-            )
-            ->dehydrateStateUsing(
-                fn ($state) => $state * 100
-            );
+            ->afterStateHydrated(function (TextInput $component, mixed $state): void {
+                if ($state === null || $state === '') {
+                    return;
+                }
+
+                $component->state($state / 100);
+            })
+            ->dehydrateStateUsing(function (mixed $state): ?int {
+                if ($state === null || $state === '') {
+                    return null;
+                }
+
+                return $state * 100;
+            });
     }
 }
